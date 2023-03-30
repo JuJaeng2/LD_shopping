@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h5>사진 등록</h5>
+        <form method="post" action="{% url 'upload' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <label for="imgfile">제품사진 : </label>
+                <input type="file" name="imgfile" id="imgfile">
+                <input type="submit" value="제출!">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

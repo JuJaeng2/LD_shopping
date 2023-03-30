@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결과창</title>
+</head>
+<body>
+    {% for i in image %}
+        <div>
+            <h2>사진</h2>
+            <h3>경로 : {{ i.imagePath.path }}</h3>
+            <img src = "{{ i.imagePath.url }}">
+        </div>
+    
+    {% endfor %}
+</body>
+</html>
